@@ -1,0 +1,154 @@
+/* Root variables */
+:root {
+
+  /* primary */
+  --orange: hsl(25, 97%, 53%);
+
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+  --paragraph-f-s: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+  border: none;
+}
+
+body {
+  background: var(--very-dark-blue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+h1 {
+  color: var(--white);
+}
+
+p {
+  color: var(--light-grey);
+  font-size: var(----paragraph-f-s);
+  font-weight: 400;
+  min-width: 302px;  
+}
+
+main {
+  margin: 20px;
+}
+
+.card-rating {
+  background: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 9%;
+  padding: 17px;
+  margin: 30px; 
+}
+
+.card-logo {
+  background: var(--very-dark-blue);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between; 
+  gap: 13px;
+}
+
+.btn {
+  background: var(--very-dark-blue);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-grey);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--orange);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  transition: all .1s ease-out
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  color: var(--white);
+  font-weight: 700;
+  background: var(--orange);
+}
+
+
+.thank-you {
+  display: none;
+}
+
+
+
+@media screen and (min-width: 435px) {
+  p {
+    width: 345px;
+  }
+
+  .card-rating {
+    padding: 25px;
+    gap: 30px;
+  }
+
+  .rating {
+    gap: 25px
+  }
+
+  .submit {
+    width: 350px;
+  }
+}
+
+
+
+
+
+.rating:hover + label .btn, 
+.rating:checked + label .btn {
+  width: 160px;
+  background: var(--orange);
+}
